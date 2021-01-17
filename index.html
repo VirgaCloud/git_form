@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <h1>Przykładowy form1</h1>
+
+    <div class="form1">
+        <form>
+            <div>
+                <label class="description" id="title1" for="field1">Podaj imię:</label>
+                <input type="text" id="fiedl1" name="field1">
+            </div>
+            <div>
+                <label class="description" id="title2" for="field2">Podaj hasło:</label>
+                <input type="password" id="fiedl2" name="field2"
+                    title="Minimum 8 zanków, wielkie litery, małe litery i znak specjalny"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            </div>
+            <div>
+                <label for="field3" id="title3" class="description">Podaj e-mail:
+                </label>
+                <input type="email" id="field3" name="field3" required>
+            </div>
+
+            <div>
+                <label class="description" id="age_label" for="age">Ile masz lat?</label>
+                <input type="number" id="age" name="age" min="1" max="10" value="5">
+                <!-- powyżej value ustala domyślna wartość -->
+            </div>
+
+            <label class="description" id="title4" for="field4">Opisz swój problem:</label>
+            <div><textarea name="field4" id="field4" rows="5" cols="30" spellcheck"true"></textarea></div>
+            <!-- po 5 rzędach zrobi się scroll -->
+
+            <div>
+                <fieldset>
+                    <legend class="description" id="title5">Wybierz sport zimowy</legend>
+                    <div>
+                        <!-- jeśli poniżej dam same inputy, to będą tylko kropki -->
+
+                        <div>
+                            <input type="radio" id="field6_0" name="radio" value="not_interested" checked="checked"
+                                value="default">
+                            <label class="choice" id="title6_0" for="field6_0">Nie interesuję się
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="field6_1" name="radio" value="skiing">
+                            <label class="choice" id="title6_1" for="field6_1">Narciarstwo</label>
+                            <!-- value to wartość wysyłana, nie widziana - po ang-->
+                        </div>
+                        <div> <input type="radio" id="field6_2" name="radio" value="ice_skating">
+                            <label class="choice" id="title6_2" for="field6_2">Łyżwiarstwo</label></div>
+
+                        <div> <input type="radio" id="field6_3" name="radio" value="ski_jumping">
+                            <label class="choice" id="title6_3" for="field6_3">Skoki narciarskie</label></div>
+
+                    </div>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset class="cities">
+                    <legend class="description" id="title7">Które miasta lubisz? (możesz wybrać więcej niż 1)</legend>
+                    <div>
+
+                        <div> <input type="checkbox" id="checkbox_0" name="checkbox_0" value="warsaw">
+                            <label class="choice" id="checkbox_0" for="checkbox_0">Warszawa</label></div>
+                        <div> <input type="checkbox" id="checkbox_1" name="checkbox_1" value="cracow">
+                            <label class="choice" id="checkbox_1" for="checkbox_1">Kraków</label></div>
+                        <div> <input type="checkbox" id="checkbox_2" name="checkbox_2" value="poznan">
+                            <label class="choice" id="checkbox_2" for="checkbox_2">Poznań</label></div>
+                        <div>
+                            <input type="checkbox" id="checkbox_3" name="checkbox_2" value="wroclaw">
+                            <label class="choice" id="checkbox_3" for="checkbox_3">Wrocław</label></div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div>
+                <label class="description" id="title8" for="field8">Wybierz 1 ulubioną muzykę</label>
+                <div>
+                    <select id="music" name="music" required>
+                        <option value="">Wybierz rodzaj muzyki</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="classic">Classic</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="submit">
+                <input type="submit" id="sendForm" name="sendForm" value="Przeslij">
+            </div>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
